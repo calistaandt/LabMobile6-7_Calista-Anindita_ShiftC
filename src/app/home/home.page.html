@@ -1,20 +1,117 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!-- Menu -->
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item routerLink="/home" routerDirection="root">Home</ion-item>
+      <ion-item routerLink="/profil" routerDirection="root">Profil</ion-item>
+      <ion-item routerLink="/galeri" routerDirection="root">Galeri</ion-item>
+      <ion-item routerLink="/berita" routerDirection="root">Berita</ion-item>
+      <ion-item routerLink="/kontak" routerDirection="root">Kontak</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Calista H1D022049</ion-title>
+      <!-- Pencarian -->
+      <ion-buttons slot="end">
+        <ion-searchbar color="light" style="max-width: 200px; width: 100%;"></ion-searchbar>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <div style="text-align: center; margin-top: 50px; font-size: 35px;">
+      <strong>Halo, Selamat Datang Di Halaman Ionic</strong>
+    </div>
+
+    <!--List-->
+    <div style="text-align: center; margin-top: 20px;">
+      <h5>Data Diri Anda</h5>
+      <ion-list style="width: 30%; margin: 0 auto;">
+        <ion-item>
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Calista Anindita</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar aria-hidden="true" slot="start">
+          </ion-avatar>
+          <ion-label>H1D022049</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+    <!--Card-->
+    <ion-card style="text-align: center; margin-top: 100px;">
+      <div align="center" style="margin-top: 20px;"> <!-- Atur margin di sini -->
+        <img alt="Ionic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUaRnwhm-6lWU4NQsVse1zEgVp153aqJJ4wA&s" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>Ionic Framework</ion-card-title>
+        <ion-card-subtitle>Ionic Framework adalah SDK open-source yang lengkap untuk pengembangan aplikasi seluler hybrid. Dibangun di atas AngularJS dan Apache Cordova, Ionic menyediakan alat dan layanan untuk mengembangkan aplikasi seluler hybrid menggunakan teknologi web seperti CSS, HTML5, dan Sass.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <!--Form-->
+    <div style="margin-top: 100px; ">
+      <h1>Form Tingkat Suka Terhadap Ionic</h1>
+      <form action="">
+        <ion-item>
+          <ion-input label="Nama" label-placement="fixed" placeholder="Isi Nama Anda"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Email" label-placement="fixed" placeholder="Isi Email Anda"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-range label-placement="start">
+            <div slot="label">Range</div>
+          </ion-range>
+        </ion-item>
+        <ion-item>
+          <ion-button slot="end" size="default"> Kirim </ion-button>
+        </ion-item>
+      </form>
+    </div>
+
+    <!--Tabel-->
+    <div style="margin-top: 100px; margin-bottom: 50px; text-align: center;">
+      <h1>Tabel Hasil Form Tingkat Suka Terhadap Ionic</h1>
+      <ion-grid [fixed]="true" style="width: 75%;">
+        <ion-row style="font-weight: 10px;">
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;"> <strong>Nama</strong></ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;"><strong>Email</strong></ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;"><strong>Tingkat Kesukaan</strong></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">Maria</ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">maria&#64;gmail.com</ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">6</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">Gina</ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">gina&#64;gmail.com</ion-col>
+          <ion-col style="border: 1px solid #ccc; text-align: center; padding: 10px;">8</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar style="text-align: center;">
+      <ion-title>Framework Ionic</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</div>
+
+
